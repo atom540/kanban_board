@@ -15,6 +15,7 @@ import High from '../assets/High.svg';
 import Medium from '../assets/Medium.svg';
 import NoPriority from '../assets/No Priority.svg';
 import Low from '../assets/Low.svg';
+import dot from '../assets/dot.svg';
 
 const KanbanCard = ({ ticket }) => {
   const isUrgent = ticket.priority === 'High'; // Example check for urgent tasks
@@ -70,6 +71,7 @@ const KanbanCard = ({ ticket }) => {
           {/* Render tags with circular indicators */}
           {ticket.tag && ticket.tag.map((tag, key) => (
             <div key={key} className="ticket-tag">
+                <img src={dot} className="dot-icon" alt="priority-icon" />
               <div>{tag}</div>
             </div>
           ))}
