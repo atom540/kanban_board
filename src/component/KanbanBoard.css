@@ -115,7 +115,7 @@
     color: #5D3FD3;
   }
   
-  /* Responsive Design */
+ 
   @media (max-width: 920px) {
     .dashboard {
       flex-direction: column;

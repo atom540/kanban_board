@@ -9,7 +9,7 @@
     position: relative;
   }
   
-  /* Dropdown button */
+
   .dropdown-btn {
     display: flex;
     align-items: center;
@@ -25,14 +25,13 @@
     
   }
   
-  /* Icons in the dropdown */
+ 
   .icon {
     width: 16px;
     height: 16px;
     fill: #555;
   }
-  
-  /* Dropdown menu container */
+ 
   .dropdown-menu {
     position: absolute;
     top: 48px;
@@ -47,7 +46,7 @@
 
   }
   
-  /* Dropdown items */
+ 
   .dropdown-item {
     margin-bottom: 16px;
     display: flex;
@@ -69,12 +68,12 @@
     color: #333;
   }
   
-  /* Hover effect for the dropdown */
+ 
   .dropdown-item select:hover {
     border-color: #aaa;
   }
   
-  /* Ensure last dropdown item doesn't have margin */
+
   .dropdown-item:last-child {
     margin-bottom: 0;
   }

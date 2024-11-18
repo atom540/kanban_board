@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import './SelectBar.css';
-import TuneIconSVG from '../assets/Display.svg'; // Import your SVG file for Tune Icon
-import ArrowDropDownSVG from '../assets/down.svg'; // Import your SVG file for Arrow Dropdown
+import TuneIconSVG from '../assets/Display.svg'; 
+import ArrowDropDownSVG from '../assets/down.svg'; 
 
 const Navbar = ({ setGrouping, setOrdering }) => {
-  const groupingOptions = [ 'Status', 'User', 'Priority'];
-  const orderingOptions = [ 'Title', 'Priority'];
+  const groupingOptions = ['Status', 'User', 'Priority'];
+  const orderingOptions = ['Title', 'Priority'];
 
   const [optionsVisible, setOptionsVisible] = useState(false);
 
   const toggleOptions = () => setOptionsVisible(!optionsVisible);
+  const closeOptions = () => setOptionsVisible(false); 
 
   return (
     <nav className="navbar">
@@ -19,8 +20,6 @@ const Navbar = ({ setGrouping, setOrdering }) => {
         <img src={ArrowDropDownSVG} alt="Arrow Down Icon" className="icon" />
       </button>
       {optionsVisible && (
-    
-
         <div className="dropdown-menu">
           <div className="dropdown-item">
             <label htmlFor="grouping">Grouping</label>
@@ -30,6 +29,7 @@ const Navbar = ({ setGrouping, setOrdering }) => {
                 const value = e.target.value;
                 localStorage.setItem('grouping', value);
                 setGrouping(value);
+                closeOptions(); 
               }}
               defaultValue={localStorage.getItem('grouping') || 'None'}
             >
@@ -48,6 +48,7 @@ const Navbar = ({ setGrouping, setOrdering }) => {
                 const value = e.target.value;
                 localStorage.setItem('ordering', value);
                 setOrdering(value);
+                closeOptions(); 
               }}
               defaultValue={localStorage.getItem('ordering') || 'None'}
             >
@@ -59,7 +60,6 @@ const Navbar = ({ setGrouping, setOrdering }) => {
             </select>
           </div>
         </div>
-       
       )}
     </nav>
   );
