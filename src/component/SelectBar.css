@@ -1,0 +1,81 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  }
+  
+  /* Dropdown button */
+  .dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+  }
+  
+  /* Icons in the dropdown */
+  .icon {
+    width: 16px;
+    height: 16px;
+    fill: #555;
+  }
+  
+  /* Dropdown menu container */
+  .dropdown-menu {
+    position: absolute;
+    top: 48px;
+    left: 16px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 16px;
+    z-index: 10;
+    min-width: 200px;
+    flex-direction: row;
+
+  }
+  
+  /* Dropdown items */
+  .dropdown-item {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .dropdown-item label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 4px;
+  }
+  
+  .dropdown-item select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Hover effect for the dropdown */
+  .dropdown-item select:hover {
+    border-color: #aaa;
+  }
+  
+  /* Ensure last dropdown item doesn't have margin */
+  .dropdown-item:last-child {
+    margin-bottom: 0;
+  }
+  

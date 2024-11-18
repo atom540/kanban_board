@@ -1,43 +1,137 @@
-.kanban-board {
+/* Kanban Board Styles */
+.dashboard {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    justify-content: flex-start; 
-    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f1f2f3;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
   
-  .kanban-column {
-    flex: 1;
-    min-width: 300px;
-    max-width: 350px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+  .dashboard-group {
+    /* background-color: #fff; */
     border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    padding: 15px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .dashboard-group2{
+    display: flex;
+    gap: 20px;
+    /* flex: 1; */
+  }
+  
+  .dashboard-group-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .dashboard-group-cards {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px;
   }
   
-  .group-header {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+  /* Kanban Card Styles */
+  .ticket-main {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ticket-main:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
   }
   
-  .group-tickets {
+  .ticket-id {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5D3FD3;
+  }
+  
+  .ticket-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .ticket-content-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .ticket-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .ticket-metadata {
     display: flex;
     flex-direction: column;
-    gap: 10px;
   }
   
-  .kanban-card {
-    background: white;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  .ticket-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   }
   
+  .ticket-tag {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .ticket-icon {
+    width: 16px;
+    height: 16px;
+    color: #5D3FD3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 920px) {
+    .dashboard {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .dashboard-group {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .icon_bar{
+    padding-top:20px;
+    width: 16px;
+    height: 16px;
+    fill: #555;
+  }

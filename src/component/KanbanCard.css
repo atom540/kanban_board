@@ -1,0 +1,113 @@
+/* Main ticket card style */
+.ticket-main {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 250px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* On hover effect for the ticket */
+  .ticket-main:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  /* Ticket header section: ID and User Icon */
+  .ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .ticket-id {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .ticket-header svg {
+    width: 20px; /* Adjust size of icon */
+    height: 20px;
+    fill: #888; /* Icon color */
+  }
+  
+  /* Ticket content section: Title and Status */
+  .ticket-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .ticket-content-title {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .ticket-title {
+    display: flex;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    gap: 15px;
+    align-items: baseline;
+
+  }
+ 
+  
+  /* Ticket metadata section: Tags */
+  .ticket-metadata {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ticket-tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .ticket-tag {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    color: #535353;
+    font-size: 14px;
+  }
+  
+  /* Tag indicator circle style */
+  .ticket-tag svg {
+    width: 12px; /* Adjust size of tag icon */
+    height: 12px;
+    margin-right: 5px;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 600px) {
+    .ticket-main {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .ticket-title {
+      font-size: 14px;
+    }
+  
+    .ticket-id {
+      font-size: 12px;
+    }
+  }
+ 
