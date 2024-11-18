@@ -8,8 +8,8 @@
     background-color: #f1f2f3;
     height: 100vh;
     font-family: 'Arial', sans-serif;
+    height: fit-content;
     overflow-x: auto;
-    overflow-y: hidden;
   }
   
   .dashboard-group {
